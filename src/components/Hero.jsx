@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Daniel from "../assets/Daniel-Adeleye.jpg";
 import daniel2 from "../assets/daniel2.jpg";
@@ -93,10 +94,12 @@ export default function Hero() {
       </p>
 
       <div className="flex justify-center md:justify-start">
-        <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition">
-          Become a Sponsor
-        </button>
-      </div>
+  <Link to="/contact">
+    <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition">
+      Become a Sponsor
+    </button>
+  </Link>
+</div>
     </motion.div>
 
     {/* Image */}
