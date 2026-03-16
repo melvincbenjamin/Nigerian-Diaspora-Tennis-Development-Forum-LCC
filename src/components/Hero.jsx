@@ -52,11 +52,11 @@ export default function Hero() {
             transition={{ duration: 1 }}
           >
             <h1 className="text-white text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold px-4 font-serif">
-              Tennis In Nigeria
+              Nigerian Diaspora Tennis Development Forum LCC
             </h1>
 
             <p className="text-gray-300 mt-2">
-              Lawn Tennis Championship
+              Nigerian Tennis Championship
             </p>
           </motion.div>
         </div>

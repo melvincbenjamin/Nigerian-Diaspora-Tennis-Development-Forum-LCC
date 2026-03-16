@@ -2,39 +2,31 @@ import React from "react";
 import { motion } from "framer-motion";
 import BoardOfDirectors from "../assets/BoardOfDirectors.jpg";
 import member1 from "../assets/williamOgene(bill).jpeg";
-import member2 from "../assets/player2.JPG";
-import member3 from "../assets/member3.jpeg";
-import member4 from "../assets/player4.jpg";
+import member2 from "../assets/Dukes.jpeg";
+import member3 from "../assets/RunsellJCC.jpeg";
 
 const boardMembers = [
   {
-    name: "Mr Dukes Odizor",
+    name: "Mr Nduka Dukes Odizor",
     role: "President",
     image: member2,
     description:
-      "Former Nigerian tennis champion and respected leader dedicated to advancing the growth of tennis in Nigeria and mentoring the next generation of players.",
+      "Nduka Odizor is a former Nigerian professional tennis player who reached career-high rankings of world No. 52 in singles and No. 20 in doubles in 1984. He won the 1983 Taipei Grand Prix singles title, captured seven ATP doubles titles, represented Nigeria in the Davis Cup from 1986–1993, and competed at the 1988 Seoul Olympics.",
   },
   {
-    name: "William (Bill) Ogene",
+    name: "Mr William (Bill) Ogene",
     role: "Head Tennis Professional",
     image: member1,
     description:
       "Experienced tennis professional responsible for overseeing player development programs and coaching initiatives aimed at elevating the standard of tennis training.",
   },
   {
-    name: "Michael-Ann Russell",
+    name: "Mr Michael-Ann Russell JCC (North Miami Beach, FL)",
     role: "Technical Director",
     image: member3,
     description:
-      "Former African junior tennis champion and multi-time District Tennis Professional of the Year. Inducted into the 2018 Southern University Baton Rouge Sports Hall of Fame. Coached Gabriella Paz and Nathan Rosenfeld to the finals of the U.S. Open Junior Open.",
-  },
-  {
-    name: "Grace Johnson",
-    role: "Secretary General",
-    image: member4,
-    description:
-      "Responsible for administrative leadership, organizational coordination, and ensuring the smooth operation of programs and tournaments within the organization.",
-  },
+      "Former African junior tennis champion and multi‑time District Tennis Professional of the Year. 2018 inductee, Southern University Baton Rouge Sports Hall of Fame. Coached Gabriella Paz and Nathan Rosenfeld to the finals of the U.S. Open Junior Open." 
+     },
 ];
 
 export default function Board() {
