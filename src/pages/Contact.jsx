@@ -117,7 +117,28 @@ export default function Contact() {
 
         </div>
       </section>
+{/* Google Map */}
+<section className="py-16 bg-gray-100">
+  <div className="max-w-6xl mx-auto px-6">
 
+    <h2 className="text-3xl font-bold text-center text-green-900 mb-10">
+      Our Location
+    </h2>
+
+    <div className="w-full h-[400px] rounded-2xl overflow-hidden shadow-lg">
+      <iframe
+        title="Google Map"
+        src="https://www.google.com/maps?q=Lagos,Nigeria&output=embed"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+
+  </div>
+</section>
     </div>
   );
 }

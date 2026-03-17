@@ -9,6 +9,7 @@ import History from "./pages/History";
 import HallOfFame from "./pages/HallOfFame";
 import Tournaments from "./pages/Tournaments";
 import Contact from "./pages/Contact";
+import WhatsappButton from "./components/WhatsappButton.jsx";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
 
       {/* Footer at the bottom */}
       <Footer />
+      <WhatsappButton />
     </Router>
     </div>
   );
