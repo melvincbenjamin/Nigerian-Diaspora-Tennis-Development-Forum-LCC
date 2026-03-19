@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const WhatsappButton = () => {
-  const whatsappNumber = "+1 (346) 205-2090";
+  const whatsappNumber = "+1 862-576-4553";
   const [userType, setUserType] = useState("player");
 
   const messages = {

@@ -36,7 +36,7 @@ export default function Footer() {
             <li><a href="#" className="hover:text-yellow-400">Youth Development</a></li>
             <li><a href="#" className="hover:text-yellow-400">Coaching Programs</a></li>
             <li><a href="#" className="hover:text-yellow-400">National Tournaments</a></li>
-            <li><a href="#" className="hover:text-yellow-400">Sponsorship</a></li>
+            <li><a href="" className="hover:text-yellow-400">Sponsorship</a></li>
           </ul>
         </div>
 
@@ -44,15 +44,14 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
           <ul className="space-y-2 text-sm">
-            <li>Email: info@nigeriatennis.org</li>
-            <li>Phone: +234 000 000 0000</li>
-            <li>Lagos, Nigeria</li>
+            <li>Email: juliussunday909@gmail.com</li>
+            <li>Phone: +1 862-576-4553</li>
+            <li>Taxis, USA</li>
           </ul>
 
           <div className="flex gap-4 mt-4">
-            <a href="#" className="hover:text-yellow-400">Facebook</a>
-            <a href="#" className="hover:text-yellow-400">Instagram</a>
-            <a href="#" className="hover:text-yellow-400">Twitter</a>
+            <a href="https://web.facebook.com/julisky06" className="hover:text-yellow-400">Facebook</a>
+            <a href="https://www.instagram.com/AdelekeTennisAcademy" className="hover:text-yellow-400">Instagram</a>
           </div>
         </div>
 

@@ -4,6 +4,8 @@ import BoardOfDirectors from "../assets/BoardOfDirectors.jpg";
 import member1 from "../assets/williamOgene(bill).jpeg";
 import member2 from "../assets/Dukes.jpeg";
 import member3 from "../assets/RunsellJCC.jpeg";
+import member4 from "../assets/julius3.jpg";
+
 
 const boardMembers = [
   {
@@ -27,6 +29,13 @@ const boardMembers = [
     description:
       "Former African junior tennis champion and multi‑time District Tennis Professional of the Year. 2018 inductee, Southern University Baton Rouge Sports Hall of Fame. Coached Gabriella Paz and Nathan Rosenfeld to the finals of the U.S. Open Junior Open." 
      },
+      {
+    name: "Mr Julius Sunday Adeleke",
+    role: "Tennis Coach",
+    image: member4,
+    description:
+        "Julius S. Adeleke, founder of Adeleke Tennis Academy, is a two-time All Secondary Schools Champion (2008 & 2009) and an Eko 2012 doubles bronze medalist."
+  },
 ];
 
 export default function Board() {
