@@ -46,7 +46,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li>Email: juliussunday909@gmail.com</li>
             <li>Phone: +1 862-576-4553</li>
-            <li>Taxis, USA</li>
+            <li>Texas, USA</li>
           </ul>
 
           <div className="flex gap-4 mt-4">
