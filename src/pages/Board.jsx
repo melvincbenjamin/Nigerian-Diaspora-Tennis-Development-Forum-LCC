@@ -2,9 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import BoardOfDirectors from "../assets/BoardOfDirectors.jpg";
 import member1 from "../assets/williamOgene(bill).jpeg";
-import member2 from "../assets/Dukes.jpeg";
+import member2 from "../assets/Dukes2.jpeg";
 import member3 from "../assets/RunsellJCC.jpeg";
 import member4 from "../assets/julius3.jpg";
+import member5 from "../assets/Friday.jpeg";
 
 
 const boardMembers = [
@@ -31,11 +32,18 @@ const boardMembers = [
      },
       {
     name: "Mr Julius Sunday Adeleke",
-    role: "Tennis Coach",
+    role: "Lead Tennis Coach",
     image: member4,
     description:
         "Julius S. Adeleke, founder of Adeleke Tennis Academy, is a two-time All Secondary Schools Champion (2008 & 2009) and an Eko 2012 doubles bronze medalist."
   },
+  {
+    name: "Mr Friday Otabor",
+    role: "Elite Tennis Coach & Academy Director",
+    image: member5,
+    description:
+          "Friday Otabor is a former Nigerian National Junior Champion and the owner and director of Spring Woodlands Tennis Academy in Spring, Texas, where he focuses on developing high-performance players." 
+ },
 ];
 
 export default function Board() {
