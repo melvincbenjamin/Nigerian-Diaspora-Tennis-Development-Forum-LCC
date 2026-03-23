@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import contactBg from "../assets/contactbg1.webp";
+import { Helmet } from "react-helmet";
 
 export default function Contact() {
   const form = useRef();
@@ -40,6 +41,40 @@ export default function Contact() {
 
   return (
     <div className="w-full">
+
+      {/* SEO */}
+      <Helmet>
+        <title>Contact | Nigerian Tennis Development Forum LCC</title>
+
+        <meta
+          name="description"
+          content="Learn about the Nigerian Tennis Development Forum LCC. We are dedicated to growing lawn tennis in Nigeria by nurturing talent, organizing tournaments, and creating sponsorship opportunities for players."
+        />
+
+        <meta
+          name="keywords"
+          content="Nigeria tennis, tennis Nigeria, Nigerian tennis players, tennis development Nigeria, tennis sponsorship Nigeria, lawn tennis Nigeria, tennis tournaments Nigeria"
+        />
+
+        <meta name="author" content="Nigerian Diaspora Tennis Development Forum LCC" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="About Nigerian Tennis Development Forum" />
+        <meta
+          property="og:description"
+          content="Learn how we are growing tennis in Nigeria through training, tournaments, and sponsorship opportunities."
+        />
+        <meta property="og:image" content="/Logo.jpg" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Nigerian Tennis Development Forum" />
+        <meta
+          name="twitter:description"
+          content="Growing tennis in Nigeria through structured development and sponsorship opportunities."
+        />
+      </Helmet>
 
       {/* Hero Background */}
       <section

@@ -5,6 +5,7 @@ import Player1 from "../assets/Player1.webp";
 import player2 from "../assets/player2.JPG";
 import player3 from "../assets/player3.PNG";
 import player4 from "../assets/player4.jpg";
+import { Helmet } from "react-helmet";
 
 const hallOfFamers = [
   {
@@ -40,6 +41,40 @@ const hallOfFamers = [
 export default function HallOfFame() {
   return (
     <div className="w-full">
+
+      {/* SEO */}
+      <Helmet>
+        <title>HallOfFame | Nigerian Tennis Development Forum LCC</title>
+
+        <meta
+          name="description"
+          content="Learn about the Nigerian Tennis Development Forum LCC. We are dedicated to growing lawn tennis in Nigeria by nurturing talent, organizing tournaments, and creating sponsorship opportunities for players."
+        />
+
+        <meta
+          name="keywords"
+          content="Nigeria tennis, tennis Nigeria, Nigerian tennis players, tennis development Nigeria, tennis sponsorship Nigeria, lawn tennis Nigeria, tennis tournaments Nigeria"
+        />
+
+        <meta name="author" content="Nigerian Diaspora Tennis Development Forum LCC" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="About Nigerian Tennis Development Forum" />
+        <meta
+          property="og:description"
+          content="Learn how we are growing tennis in Nigeria through training, tournaments, and sponsorship opportunities."
+        />
+        <meta property="og:image" content="/Logo.jpg" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Nigerian Tennis Development Forum" />
+        <meta
+          name="twitter:description"
+          content="Growing tennis in Nigeria through structured development and sponsorship opportunities."
+        />
+      </Helmet>
 
       {/* Hero Section */}
       <section

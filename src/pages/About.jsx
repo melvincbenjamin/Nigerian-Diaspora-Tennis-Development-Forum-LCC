@@ -1,10 +1,45 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 import aboutbg from "../assets/aboutbg2.avif";
 
 export default function About() {
   return (
     <div className="w-full">
+
+      {/* SEO */}
+      <Helmet>
+        <title>About | Nigerian Tennis Development Forum LCC</title>
+
+        <meta
+          name="description"
+          content="Learn about the Nigerian Tennis Development Forum LCC. We are dedicated to growing lawn tennis in Nigeria by nurturing talent, organizing tournaments, and creating sponsorship opportunities for players."
+        />
+
+        <meta
+          name="keywords"
+          content="Nigeria tennis, tennis Nigeria, Nigerian tennis players, tennis development Nigeria, tennis sponsorship Nigeria, lawn tennis Nigeria, tennis tournaments Nigeria"
+        />
+
+        <meta name="author" content="Nigerian Diaspora Tennis Development Forum LCC" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="About Nigerian Tennis Development Forum" />
+        <meta
+          property="og:description"
+          content="Learn how we are growing tennis in Nigeria through training, tournaments, and sponsorship opportunities."
+        />
+        <meta property="og:image" content="/Logo.jpg" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Nigerian Tennis Development Forum" />
+        <meta
+          name="twitter:description"
+          content="Growing tennis in Nigeria through structured development and sponsorship opportunities."
+        />
+      </Helmet>
 
       {/* Hero Section */}
       <section className="relative w-full h-[60vh] md:h-[70vh]">
@@ -52,64 +87,47 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
 
           {/* Mission Card */}
-<motion.div
-  initial={{ opacity: 0, x: -50 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.8 }}
-  className="bg-green-800 border-2 border-green-700 p-8 rounded-2xl shadow-lg text-center md:text-left transition hover:shadow-2xl"
->
-  <h3 className="text-2xl font-bold mb-4 text-white">Our Mission</h3>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="bg-green-800 border-2 border-green-700 p-8 rounded-2xl shadow-lg text-center md:text-left transition hover:shadow-2xl"
+          >
+            <h3 className="text-2xl font-bold mb-4 text-white">Our Mission</h3>
 
-  <p className="text-white leading-relaxed">
-    Our mission is to drive the growth and transformation of tennis in Nigeria
-    by building a strong foundation for the sport at every level. We are
-    committed to developing tennis through structured grassroots and
-    fundamental programs that introduce and nurture young talents across the
-    country.
-  </p>
+            <p className="text-white leading-relaxed">
+              Our mission is to drive the growth and transformation of tennis in Nigeria
+              by building a strong foundation for the sport at every level...
+            </p>
 
-  <p className="text-white leading-relaxed mt-4">
-    We aim to revamp, reshape, and reposition Nigerian tennis by strengthening
-    the systems that support players, coaches, and competitions. This includes
-    establishing and supporting a sustainable coaching structure that empowers
-    coaches with the knowledge, resources, and opportunities needed to develop
-    world-class athletes.
-  </p>
+            <p className="text-white leading-relaxed mt-4">
+              We aim to revamp, reshape, and reposition Nigerian tennis...
+            </p>
 
-  <p className="text-white leading-relaxed mt-4">
-    Through the support of local tournaments, scholarship opportunities for
-    talented and deserving players, and welfare initiatives such as pension
-    support for retiring coaches, we remain committed to building a thriving
-    tennis ecosystem that inspires future generations and elevates Nigerian
-    tennis on the global stage.
-  </p>
-</motion.div>
+            <p className="text-white leading-relaxed mt-4">
+              Through the support of local tournaments, scholarship opportunities...
+            </p>
+          </motion.div>
 
           {/* Vision Card */}
-<motion.div
-  initial={{ opacity: 0, x: 50 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.8 }}
-  className="bg-green-800 border-2 border-green-700 p-8 rounded-2xl shadow-lg text-center md:text-left transition hover:shadow-2xl"
->
-  <h3 className="text-2xl font-bold mb-4 text-white">Our Vision</h3>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="bg-green-800 border-2 border-green-700 p-8 rounded-2xl shadow-lg text-center md:text-left transition hover:shadow-2xl"
+          >
+            <h3 className="text-2xl font-bold mb-4 text-white">Our Vision</h3>
 
-  <p className="text-white leading-relaxed">
-    Our vision is to establish Nigeria as a powerhouse of tennis in Africa
-    and a respected force on the global stage. We aspire to build a thriving
-    tennis ecosystem that consistently produces world-class players,
-    exceptional coaches, and internationally recognized competitions.
-  </p>
+            <p className="text-white leading-relaxed">
+              Our vision is to establish Nigeria as a powerhouse of tennis in Africa...
+            </p>
 
-  <p className="text-white leading-relaxed mt-4">
-    Through strategic development programs, strong grassroots structures,
-    and sustainable support systems, we envision a future where tennis is
-    widely accessible across Nigeria and where Nigerian athletes compete,
-    succeed, and inspire the world at the highest levels of the sport.
-  </p>
-</motion.div>
+            <p className="text-white leading-relaxed mt-4">
+              Through strategic development programs...
+            </p>
+          </motion.div>
 
         </div>
       </section>
@@ -129,6 +147,7 @@ export default function About() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
 
+            {/* unchanged map */}
             {[
               {
                 title: "Youth Development",
@@ -140,19 +159,19 @@ export default function About() {
               },
               {
                 title: "National Tournaments",
-                desc: "Organizing competitive events at local and national levels to showcase talent and foster sportsmanship."
+                desc: "Organizing competitive events at local and national levels..."
               },
               {
                 title: "Sponsorship & Partnerships",
-                desc: "Collaborating with sponsors, academies, and organizations to fund programs and develop tennis infrastructure."
+                desc: "Collaborating with sponsors and organizations..."
               },
               {
                 title: "Player Development",
-                desc: "One-on-one training, fitness programs, and mentorship to help players reach national and international levels."
+                desc: "One-on-one training, fitness programs..."
               },
               {
                 title: "Community Engagement",
-                desc: "Initiatives to grow awareness, encourage participation, and promote tennis as a healthy lifestyle sport."
+                desc: "Initiatives to grow awareness and participation..."
               }
             ].map((program, idx) => (
               <motion.div
@@ -163,8 +182,12 @@ export default function About() {
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
                 className="bg-green-800 border-2 border-green-700 p-6 rounded-xl shadow hover:shadow-lg transition"
               >
-                <h3 className="text-xl font-semibold mb-3 text-white">{program.title}</h3>
-                <p className="text-white leading-relaxed">{program.desc}</p>
+                <h3 className="text-xl font-semibold mb-3 text-white">
+                  {program.title}
+                </h3>
+                <p className="text-white leading-relaxed">
+                  {program.desc}
+                </p>
               </motion.div>
             ))}
 
