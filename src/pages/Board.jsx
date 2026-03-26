@@ -6,6 +6,7 @@ import member2 from "../assets/Dukes2.jpeg";
 import member3 from "../assets/RunsellJCC.jpeg";
 import member4 from "../assets/julius3.jpg";
 import member5 from "../assets/Friday.jpeg";
+import member6 from "../assets/philip.jpeg"
 
 import { Helmet } from "react-helmet";
 
@@ -45,6 +46,13 @@ const boardMembers = [
     image: member5,
     description:
           "Friday Otabor is a former Nigerian National Junior Champion and the owner and director of Spring Woodlands Tennis Academy in Spring, Texas, where he focuses on developing high-performance players." 
+ },
+ {
+    name: "Mr Philip Nwajaei",
+    role: "Elite Tennis Coach & High-Performance Director",
+    image: member6,
+    description:
+          "He is an experienced high-performance tennis coach and academy director dedicated to developing competitive players through modern training techniques, strategic match preparation, and long-term athlete development programs." 
  },
 ];
 
