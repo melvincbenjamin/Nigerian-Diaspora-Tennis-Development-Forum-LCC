@@ -62,7 +62,7 @@ const tournamentsData = [
   },
 ];
 
-// Function to get live status based on current date
+// Function to get live status
 const getStatus = (start, end) => {
   const now = new Date();
   const startDate = new Date(start);
@@ -75,7 +75,11 @@ const getStatus = (start, end) => {
 
 export default function Tournament() {
   const [stats, setStats] = useState(statsData.map(() => 0));
+  const [tournaments, setTournaments] = useState(
+    tournamentsData.map(t => ({ ...t, status: getStatus(t.startDate, t.endDate) }))
+  );
 
+  // Animate stats
   useEffect(() => {
     const interval = setInterval(() => {
       setStats(prev =>
@@ -88,15 +92,19 @@ export default function Tournament() {
     return () => clearInterval(interval);
   }, []);
 
-  // Add live status to tournaments
-  const tournaments = tournamentsData.map(t => ({
-    ...t,
-    status: getStatus(t.startDate, t.endDate),
-  }));
+  // Auto-update tournament status every 1 minute
+  useEffect(() => {
+    const statusInterval = setInterval(() => {
+      setTournaments(prev =>
+        prev.map(t => ({ ...t, status: getStatus(t.startDate, t.endDate) }))
+      );
+    }, 60000); // 60000ms = 1 minute
+
+    return () => clearInterval(statusInterval);
+  }, []);
 
   return (
     <div className="w-full">
-
       {/* SEO */}
       <Helmet>
         <title>Tournament | Nigerian Tennis Development Forum LCC</title>
@@ -141,14 +149,14 @@ export default function Tournament() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tournaments
               .filter(t => t.status === "Upcoming" || t.status === "Ongoing")
-              .map((tournament, index) => (
+              .map((t, index) => (
                 <motion.div key={index} className="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-green-700 hover:shadow-2xl transition" whileHover={{ scale: 1.03 }} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: index * 0.1 }}>
-                  <h3 className="text-xl font-bold text-green-900">{tournament.name}</h3>
-                  <p className="text-gray-700 mt-2">📍 {tournament.location}</p>
-                  <p className="text-gray-700 mt-1">📅 {tournament.startDate} – {tournament.endDate}</p>
-                  <p className="text-gray-600 mt-2">{tournament.description}</p>
-                  <p className={`mt-2 font-semibold ${tournament.status === "Ongoing" ? "text-yellow-500" : "text-blue-500"}`}>{tournament.status}</p>
-                  <a href={tournament.link} className="mt-4 inline-block w-full text-center bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition">Learn More</a>
+                  <h3 className="text-xl font-bold text-green-900">{t.name}</h3>
+                  <p className="text-gray-700 mt-2">📍 {t.location}</p>
+                  <p className="text-gray-700 mt-1">📅 {t.startDate} – {t.endDate}</p>
+                  <p className="text-gray-600 mt-2">{t.description}</p>
+                  <p className={`mt-2 font-semibold ${t.status === "Ongoing" ? "text-yellow-500" : "text-blue-500"}`}>{t.status}</p>
+                  <a href={t.link} className="mt-4 inline-block w-full text-center bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition">Learn More</a>
                 </motion.div>
               ))}
           </div>
@@ -162,13 +170,13 @@ export default function Tournament() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tournaments
               .filter(t => t.status === "Completed")
-              .map((tournament, index) => (
+              .map((t, index) => (
                 <motion.div key={index} className="bg-green-800 rounded-2xl shadow-lg p-6 border-l-4 border-green-700 hover:shadow-xl transition" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: index * 0.1 }}>
-                  <h3 className="text-xl font-bold">{tournament.name}</h3>
-                  <p className="mt-2">📍 {tournament.location}</p>
-                  <p className="mt-1">📅 {tournament.startDate} – {tournament.endDate}</p>
-                  <p className="mt-2">{tournament.description}</p>
-                  <a href={tournament.link} className="mt-4 inline-block text-center bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition">Learn More</a>
+                  <h3 className="text-xl font-bold">{t.name}</h3>
+                  <p className="mt-2">📍 {t.location}</p>
+                  <p className="mt-1">📅 {t.startDate} – {t.endDate}</p>
+                  <p className="mt-2">{t.description}</p>
+                  <a href={t.link} className="mt-4 inline-block text-center bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition">Learn More</a>
                 </motion.div>
               ))}
           </div>
