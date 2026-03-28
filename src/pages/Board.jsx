@@ -20,19 +20,12 @@ const boardMembers = [
       "Nduka Odizor is a former Nigerian professional tennis player who reached career-high rankings of world No. 52 in singles and No. 20 in doubles in 1984. He won the 1983 Taipei Grand Prix singles title, captured seven ATP doubles titles, represented Nigeria in the Davis Cup from 1986–1993, and competed at the 1988 Seoul Olympics.",
   },
   {
-    name: "Mr William (Bill) Ogene",
-    role: "Head Tennis Professional",
-    image: member1,
-    description:
-      "Experienced tennis professional responsible for overseeing player development programs and coaching initiatives aimed at elevating the standard of tennis training.",
-  },
-  {
-    name: "Mr Michael-Ann Russell JCC (North Miami Beach, FL)",
-    role: "Technical Director",
-    image: member3,
-    description:
-      "Former African junior tennis champion and multi‑time District Tennis Professional of the Year. 2018 inductee, Southern University Baton Rouge Sports Hall of Fame. Coached Gabriella Paz and Nathan Rosenfeld to the finals of the U.S. Open Junior Open." 
-     },
+  name: "Mr William (Bill) Ogene",
+  role: "Head Tennis Professional & Technical Director",
+  image: member1,
+  description:
+    "Experienced tennis professional leading player development and coaching programs. Former African junior champion, multi-time District Tennis Professional of the Year, and 2018 inductee of the Southern University Baton Rouge Sports Hall of Fame."
+},
       {
     name: "Mr Julius Sunday Adeleke",
     role: "Lead Tennis Coach",
